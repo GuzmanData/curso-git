@@ -1,0 +1,47 @@
+//crear una nueva rama
+git branch rama-villanos
+
+
+//movernos entre ramas
+ git checkout rama-villanos
+ 
+ //ver diferencias entre ramas
+ git diff rama-villanos master
+
+
+//unir una rama a master ( para unir tenemos que estar en la rama donde queremos llevar la union)
+git checkout master
+git merge rama-villanos
+
+
+//borrar una rama
+git branch -d rama-villanos
+
+
+//crear una rama y moverse a ella
+git checkout -b rama-villano
+
+
+//Crear un tag
+git tag sperRealese
+
+//listar tag
+git tag
+
+//borrar tag
+git tag -d sperRealese
+
+
+//crear tag con más detalles
+git tag -a v1.0.0 -m "Versión 1.0.0"
+
+
+//colocar un tag en un commit antiguo
+ git tag -a v0.1.0 345d7de -m "Version alfa"
+ 
+ 
+ //ver detalles de un tag
+ git show v1.0.0
+
+
+

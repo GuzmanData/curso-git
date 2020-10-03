@@ -1,0 +1,151 @@
+//saber versión de git y si exta instalada
+git --version
+
+instalar plugins gist en atom
+
+//saber version de atom
+atom --version
+
+
+//ayuda de git
+git --help
+
+//ayuda de un comando en especifico
+git help commit
+
+
+//configurar usuario
+git config --global user.name "guzmandata"
+git config --global user.name "carlosGuzman"
+
+
+//configurar email
+git config --global user.email "guzmandata@gmail.com"
+git config --global user.email "carlos.guzman.0515@gmail.com"
+
+
+//para entrar al arcivo de configuracion ( no recomendado editar)
+git config --global -e
+
+//listar las configuraciones
+git config --global -l
+
+//iniciar o crear un repositorio
+git init
+
+
+//conocer estatus del repositorio
+git status
+
+//agregar todos los archivos al  repositorio
+git add .
+
+
+//add a los archivos por extensión
+git add *.png
+
+//agregar todos los archivos de una carpeta
+git add css/
+
+
+//excluir un archvo del stage, en este caso todos los que terminen en .xml
+git reset *.xml
+
+
+
+//hacer un commit
+git commit -m "Primer commit"
+
+
+//retorna al ultimo commit 
+git checkout -- .
+
+
+//agregar un archivo en especifico, en este caso el README
+git add README.md
+
+//ver historial de commit
+git log
+
+
+//ver una sola linea del log
+git log --oneline
+
+
+//status más resumido
+git status -s
+
+//para ver la rama y el estado resumido
+git status -s -b
+
+
+//crear un alias para un comando
+git config --global alias.lg "log --oneline --decorate --all --graph"
+git config --global alias.s "status -s -b"
+
+//ver diferencias commit anterior y momento actual
+git diff
+
+
+//diferencias entre el momento actual y los archivos en stage
+git diff --staged
+
+
+//reveritr los camibos de un archivo
+git checkout -- README.md
+
+
+//Agregar al stage y commit al mismo tiempo
+git commit -am "Readme actualz"
+
+
+//modificar el mensaje del ultimo commit
+git commit --amend -m "Actualizamos el README.md"
+
+
+//Para introducir un nuevo cambio en el ultimo commit
+git reset --soft HEAD^
+git commit -am "Atualizamos el readme con todos los archivos a omitir"
+
+
+//suprimir un warning
+git config core.autocrlf true
+
+//mensajes multilinea del commit
+git commit
+
+
+
+#-------------Viajes en el tiempo ----------------------- #
+
+
+//volver a un commit en especifico
+git reset --soft bc39f9c
+
+//volver al head o un commit especifico con los cambios
+git reset --mixed e34105f
+
+//movernos a un punto en especifico y perder los cambios
+git reset --hard e34105f
+
+
+//para ver todos los movimientos en el tiempo sin importar la forma en que se hiciera en reset
+git reflog
+
+
+#---------------------Renombrar, eliminar y mover archivos ------------------------ #
+
+//renombrar archivo con git
+git mv destruir-mundo.txt.txt salvarmundo.txt
+
+//eliminar archivo
+git rm salvarmundo.txt
+
+
+//actualizar git
+git add -u
+
+
+
+
+
